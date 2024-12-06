@@ -1,0 +1,15 @@
+room(1..4).
+table(1..16).
+person(1..30).
+same_table(14,2).
+same_table(20,26).
+same_table(29,1).
+same_table(15,4).
+same_table(26,17).
+hate(9,15).
+hate(12,25).
+hate(14,20).
+dangerous(22).
+dangerous(24).
+dangerous(17).
+security_cameras(1).

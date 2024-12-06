@@ -1,0 +1,14 @@
+clingo version 5.4.1
+Reading from provaASP9.lp
+Solving...
+Answer: 1
+assign(1,6,3) assign(2,7,3) assign(3,12,2) assign(4,6,3) assign(5,12,2) assign(6,6,3) assign(7,16,3) assign(8,12,2) assign(9,16,3) assign(10,12,2) assign(11,6,3) assign(12,7,3) assign(13,16,3) assign(14,7,3) assign(15,16,3) assign(16,7,3) count_seats_occupied(1,1,0) count_seats_occupied(1,2,0) count_seats_occupied(1,3,0) count_seats_occupied(1,5,0) count_seats_occupied(2,12,4) count_seats_occupied(2,13,0) count_seats_occupied(2,14,0) count_seats_occupied(2,15,0) count_seats_occupied(3,4,0) count_seats_occupied(3,6,4) count_seats_occupied(3,7,4) count_seats_occupied(3,16,4) count_seats_occupied(4,8,0) count_seats_occupied(4,9,0) count_seats_occupied(4,10,0) count_seats_occupied(4,11,0)
+Optimization: 2
+OPTIMUM FOUND
+
+Models       : 1
+  Optimum    : yes
+Optimization : 2
+Calls        : 1
+Time         : 0.047s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.044s

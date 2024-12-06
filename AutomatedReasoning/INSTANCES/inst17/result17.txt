@@ -1,0 +1,14 @@
+clingo version 5.4.1
+Reading from provaASP17.lp
+Solving...
+Answer: 1
+assign(1,30,3) assign(2,22,5) assign(3,16,5) assign(4,23,5) assign(5,30,3) assign(6,22,5) assign(7,15,1) assign(8,30,3) assign(9,16,5) assign(10,22,5) assign(11,15,1) assign(12,16,5) assign(13,32,3) assign(14,28,3) assign(15,22,5) assign(16,30,3) assign(17,23,5) assign(18,7,1) assign(19,32,3) assign(20,32,3) assign(21,7,1) assign(22,32,3) assign(23,15,1) assign(24,10,1) assign(25,15,1) assign(26,28,3) assign(27,28,3) assign(28,23,5) assign(29,16,5) assign(30,7,1) assign(31,28,3) assign(32,23,5) assign(33,7,1) assign(34,10,1) assign(35,10,1) count_seats_occupied(1,7,4) count_seats_occupied(1,10,3) count_seats_occupied(1,14,0) count_seats_occupied(1,15,4) count_seats_occupied(2,24,0) count_seats_occupied(2,25,0) count_seats_occupied(2,26,0) count_seats_occupied(2,27,0) count_seats_occupied(3,28,4) count_seats_occupied(3,29,0) count_seats_occupied(3,30,4) count_seats_occupied(3,32,4) count_seats_occupied(4,5,0) count_seats_occupied(4,6,0) count_seats_occupied(4,8,0) count_seats_occupied(4,9,0) count_seats_occupied(5,16,4) count_seats_occupied(5,20,0) count_seats_occupied(5,22,4) count_seats_occupied(5,23,4) count_seats_occupied(6,17,0) count_seats_occupied(6,18,0) count_seats_occupied(6,19,0) count_seats_occupied(6,21,0) count_seats_occupied(7,11,0) count_seats_occupied(7,12,0) count_seats_occupied(7,13,0) count_seats_occupied(7,31,0) count_seats_occupied(8,1,0) count_seats_occupied(8,2,0) count_seats_occupied(8,3,0) count_seats_occupied(8,4,0)
+Optimization: 3
+OPTIMUM FOUND
+
+Models       : 1
+  Optimum    : yes
+Optimization : 3
+Calls        : 1
+Time         : 98.882s (Solving: 96.11s 1st Model: 0.03s Unsat: 96.08s)
+CPU Time     : 91.272s

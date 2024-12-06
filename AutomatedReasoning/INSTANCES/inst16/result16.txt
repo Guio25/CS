@@ -1,0 +1,15 @@
+clingo version 5.4.1
+Reading from provaASP16.lp
+Solving...
+Answer: 1
+assign(1,8,2) assign(2,10,4) assign(3,2,1) assign(4,1,2) assign(5,2,1) assign(6,3,1) assign(7,8,2) assign(8,10,4) assign(9,1,2) assign(10,3,1) assign(11,15,1) assign(12,8,2) assign(13,10,4) assign(14,5,2) assign(15,5,2) assign(16,15,1) assign(17,10,4) assign(18,4,2) assign(19,5,2) assign(20,4,2) assign(21,4,2) assign(22,5,2) assign(23,2,1) assign(24,16,1) assign(25,15,1) assign(26,15,1) assign(27,1,2) assign(28,4,2) assign(29,3,1) assign(30,8,2) assign(31,3,1) assign(32,16,1) assign(33,16,1) assign(34,2,1) assign(35,1,2) count_seats_occupied(1,2,4) count_seats_occupied(1,3,4) count_seats_occupied(1,15,4) count_seats_occupied(1,16,3) count_seats_occupied(2,1,4) count_seats_occupied(2,4,4) count_seats_occupied(2,5,4) count_seats_occupied(2,8,4) count_seats_occupied(3,7,0) count_seats_occupied(3,11,0) count_seats_occupied(3,12,0) count_seats_occupied(3,13,0) count_seats_occupied(4,6,0) count_seats_occupied(4,9,0) count_seats_occupied(4,10,4) count_seats_occupied(4,14,0)
+Optimization: 3
+SATISFIABLE
+
+TIME LIMIT   : 1
+Models       : 1+
+  Optimum    : unknown
+Optimization : 3
+Calls        : 1
+Time         : 300.001s (Solving: 299.85s 1st Model: 0.03s Unsat: 0.00s)
+CPU Time     : 276.905s
