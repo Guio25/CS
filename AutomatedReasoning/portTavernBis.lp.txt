@@ -1,0 +1,36 @@
+
+1{assign(X,T,R) : table(T), room(R)}1 :- person(X).
+
+equal(T,T,R,R) :-  table(T), room(R).
+
+:- person(X), person(Y), X != Y, same_table(X,Y),
+    assign(X,T1,R1), assign(Y,T2,R2),
+    table(T1), table(T2), room(R1), room(R2),
+    not equal(T1,T2,R1,R2).
+
+
+%%%%
+:- person(X), person(Y), X != Y, hate(X,Y),
+    assign(X,_,R), assign(Y,_,R), room(R).
+
+%%%%
+:- person(X), dangerous(X), assign(X,_,R), room(R), not security_cameras(R).
+
+%%%% At most 4 per table
+
+:- table(T), room(R), S = #count{ X: person(X),assign(X,T,R) }, S > 4.
+
+%%%%
+%room_used(R) :- person(P), assign(P,_,R).
+
+%#minimize {R : room_used(R)}.
+
+room_used(C) :- C = #count{K : room(K), assign(_,_,K) }.
+
+#minimize {C : room_used(C)}.
+
+
+
+#show assign/3.
+%#show security_cameras/1.
+#show room_used/1.

@@ -1,0 +1,62 @@
+ 
+%matrix to store in which rooms tables belong to
+array[1..k,1..t] of var 0..1 : is_in;
+
+%matrix to store in which table of a room the people are sit
+array [1..k,1..t] of var set of 1..n : assign;
+
+var int : s;
+
+%each table belongs to exactly one room
+constraint forall(i in 1..t) (sum (j in 1..k) (is_in[j,i] ) = 1);
+
+%each room has exactly 4 tables
+constraint forall(i in 1..k) (sum (j in 1..t) (is_in[i,j] ) = 4);
+
+
+%each person is assigned to exactly one table  
+constraint forall(i in 1..k, j in 1..t where is_in[i,j] = 0) (assign[i,j] = {} );
+
+constraint forall(z in 1..n) (sum (i in 1..k, j in 1..t where is_in[i,j] = 1) (z in assign[i,j]) = 1); 
+
+
+
+constraint forall(i,j in 1..n where i != j) 
+
+                 (same_table[i,j] = 1 -> exists(x in 1..k, y in 1..t where is_in[x,y] = 1 ) (i in assign[x,y] /\ j in assign[x,y] ) );
+
+
+%constraint forall (i,j in 1..n where i != j /\ same_table[i,j] = 1) (sum (x in 1..k, y in 1..t where is_in[x,y] = 1) 
+
+%           (i in assign[x,y] /\ j in assign[x,y]) = 1);
+
+
+%constraint forall(i in 1..k, j1,j2 in 1..t, x,y in 1..n  where  x != y /\ is_in[i,j1] = 1 /\ is_in[i,j2] = 1 ) 
+  
+ %                  ((x in assign[i,j1] /\ y in assign[i,j2]) -> hate[x,y] = 0 ); 
+
+constraint forall (i,j in 1..n where i != j)
+
+                  (hate[i,j] = 1 -> exists(x1, x2 in 1..k where x1 != x2) (i in assign[x1,_] /\ j in assign[x2,_])         );
+
+
+
+constraint forall (i in 1..n where dangerous[i] = 1) (sum (x in 1..k, y in 1..t where is_in[x,y] = 1) 
+
+                  (i in assign[x,y] /\ security_cameras[x] = 0) = 0);
+
+
+
+%at most 4 people in a table
+constraint forall (i in 1..k, j in 1..t where is_in[i,j] = 1 ) (card(assign[i,j]) <= 4 );
+
+
+constraint s = count (i in 1..k) (exists (j in 1..t where is_in[i,j] = 1) (assign[i,j] != {} ) );  
+
+constraint s < k;
+  
+solve :: seq_search([int_search(is_in, smallest,  indomain_min), set_search(assign,smallest,indomain_min)])
+  
+         minimize s;
+ 
+%solve minimize s;
